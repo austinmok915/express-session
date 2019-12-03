@@ -43,14 +43,4 @@ app.post('/login', (req,res) => {
 		if (user.name == req.body.name && user.password == req.body.password) {
 			req.session.authenticated = true;
 			req.session.username = user.name;			
-		}
-	});
-	res.redirect('/');
-});
-
-app.get('/logout', (req,res) => {
-	req.session = null;
-	res.redirect('/');
-});
-
-app.listen(process.env.PORT || 8099);
+		}account;
